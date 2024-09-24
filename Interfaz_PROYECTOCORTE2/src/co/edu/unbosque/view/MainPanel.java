@@ -23,7 +23,7 @@ public class MainPanel extends JPanel {
 		setBackground(new Color(241, 241, 236));
 
 		Image imageLblBright = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/lblBright.jpeg").getImage();
+				"assets/lblBright.jpeg").getImage();
 		ImageIcon imageIconLblBright = new ImageIcon(imageLblBright.getScaledInstance(800, 120, Image.SCALE_SMOOTH));
 		lblBright = new JLabel();
 		lblBright.setIcon(imageIconLblBright);
@@ -31,7 +31,7 @@ public class MainPanel extends JPanel {
 		
 		
 		Image imageLblDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/lblDark.png").getImage();
+				"assets/lblDark.png").getImage();
 		ImageIcon imageIconLblDark = new ImageIcon(imageLblDark.getScaledInstance(800, 120, Image.SCALE_SMOOTH));
 		lblDark = new JLabel();
 		lblDark.setIcon(imageIconLblDark);
@@ -40,7 +40,7 @@ public class MainPanel extends JPanel {
 		
 		
 		Image imageLblLogo = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/logoDorado.png").getImage();
+				"assets/logoDorado.png").getImage();
 		ImageIcon imageIconLblLogo = new ImageIcon(imageLblLogo.getScaledInstance(400, 56, Image.SCALE_SMOOTH));
 		lblLogo = new JLabel();
 		lblLogo.setIcon(imageIconLblLogo);
@@ -49,7 +49,7 @@ public class MainPanel extends JPanel {
 		add(lblLogo);
 		
 		Image imageLblLogoDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/logoDoradoDark.png").getImage();
+				"assets/logoDoradoDark.png").getImage();
 		ImageIcon imageIconLblLogoDark = new ImageIcon(imageLblLogoDark.getScaledInstance(400, 56, Image.SCALE_SMOOTH));
 		lblLogoDark = new JLabel();
 		lblLogoDark.setIcon(imageIconLblLogoDark);
@@ -61,7 +61,7 @@ public class MainPanel extends JPanel {
 		
 		
 		Image imageBtnNacional = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/destinosNacionales.png")
+				"assets/destinosNacionales.png")
 				.getImage();
 		ImageIcon imageIconBtnNacional = new ImageIcon(
 				imageBtnNacional.getScaledInstance(200, 271, Image.SCALE_SMOOTH));
@@ -77,7 +77,7 @@ public class MainPanel extends JPanel {
 
 		
 		Image imageBtnNacionalDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/destinosNacionalesDark.png")
+				"assets/destinosNacionalesDark.png")
 				.getImage();
 		ImageIcon imageIconBtnNacionalDark = new ImageIcon(
 				imageBtnNacionalDark.getScaledInstance(200, 271, Image.SCALE_SMOOTH));
@@ -93,7 +93,7 @@ public class MainPanel extends JPanel {
 		
 		
 		Image imageBtnInternacional = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/destinosInternacionales.png")
+				"assets/destinosInternacionales.png")
 				.getImage();
 		ImageIcon imageIconBtnInternacional = new ImageIcon(
 				imageBtnInternacional.getScaledInstance(200, 271, Image.SCALE_SMOOTH));
@@ -108,7 +108,7 @@ public class MainPanel extends JPanel {
 		add(btnInternacional);
 		
 		Image imageBtnInternacionalDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/destinosInternacionalesDark.png")
+				"assets/destinosInternacionalesDark.png")
 				.getImage();
 		ImageIcon imageIconBtnInternacionalDark = new ImageIcon(
 				imageBtnInternacionalDark.getScaledInstance(200, 271, Image.SCALE_SMOOTH));
@@ -123,7 +123,7 @@ public class MainPanel extends JPanel {
 		add(btnInternacionalDark);
 
 		Image imageBtnSalir = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/exit.png").getImage();
+				"assets/exit.png").getImage();
 		ImageIcon imageIconBtnSalir = new ImageIcon(imageBtnSalir.getScaledInstance(46, 48, Image.SCALE_SMOOTH));
 		btnSalir = new JButton();
 		btnSalir.setIcon(imageIconBtnSalir);
@@ -136,7 +136,7 @@ public class MainPanel extends JPanel {
 		add(btnSalir);
 		
 		Image imageBtnSalirDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/exitDark.png").getImage();
+				"assets/exitDark.png").getImage();
 		ImageIcon imageIconBtnSalirDark = new ImageIcon(imageBtnSalirDark.getScaledInstance(46, 52, Image.SCALE_SMOOTH));
 		btnSalirDark = new JButton();
 		btnSalirDark.setIcon(imageIconBtnSalirDark);
@@ -149,7 +149,7 @@ public class MainPanel extends JPanel {
 		add(btnSalirDark);
 
 		Image imageBtnChangeScreen = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/changeScreen.png").getImage();
+				"assets/changeScreen.png").getImage();
 		ImageIcon imageIconBtnChangeScreen = new ImageIcon(
 				imageBtnChangeScreen.getScaledInstance(83, 73, Image.SCALE_SMOOTH));
 		btnChangeScreen = new JButton();
@@ -165,7 +165,7 @@ public class MainPanel extends JPanel {
 		add(lblDark);
 		
 		Image imageBtnChangeScreenDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/changeScreenDark.png").getImage();
+				"assets/changeScreenDark.png").getImage();
 		ImageIcon imageIconBtnChangeScreenDark = new ImageIcon(
 				imageBtnChangeScreenDark.getScaledInstance(83, 73, Image.SCALE_SMOOTH));
 		btnChangeScreenDark = new JButton();
@@ -181,7 +181,7 @@ public class MainPanel extends JPanel {
 		
 		
 		Image imageBtnExport = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/export.png").getImage();
+				"assets/export.png").getImage();
 		ImageIcon imageIconBtnExport = new ImageIcon(
 				imageBtnExport.getScaledInstance(50, 50, Image.SCALE_SMOOTH));
 		btnExport = new JButton();
@@ -197,7 +197,7 @@ public class MainPanel extends JPanel {
 		
 		
 		Image imageBtnExportDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/exportDark.png").getImage();
+				"assets/exportDark.png").getImage();
 		ImageIcon imageIconBtnExportDark = new ImageIcon(
 				imageBtnExportDark.getScaledInstance(50, 50, Image.SCALE_SMOOTH));
 		btnExportDark = new JButton();

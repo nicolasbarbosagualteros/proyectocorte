@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 import co.edu.unbosque.model.VueloInternacional;
 import co.edu.unbosque.model.VueloInternacionalDTO;
+import co.edu.unbosque.model.VueloInternacional;
+import co.edu.unbosque.model.VueloInternacionalDTO;
 
 
 public class VueloInternacionalDAO implements CRUDOperation<VueloInternacionalDTO, VueloInternacional> {
@@ -42,18 +44,6 @@ public class VueloInternacionalDAO implements CRUDOperation<VueloInternacionalDT
 		}
 	}
 
-	@Override
-	public boolean delete(VueloInternacionalDTO toDelete) {
-		VueloInternacional found = find(DataMapper.vueloInternacionalDTOToVueloInternacional(toDelete));
-		if (found != null) {
-			writeFile();
-			writeSerialized();
-			return listaVueloInternacional.remove(found);
-
-		} else {
-			return false;
-		}
-	}
 
 	@Override
 	public VueloInternacional find(VueloInternacional toFind) {
@@ -74,21 +64,38 @@ public class VueloInternacionalDAO implements CRUDOperation<VueloInternacionalDT
 	}
 
 	@Override
-	public boolean update(VueloInternacionalDTO previous, VueloInternacionalDTO newData) {
-	
-		VueloInternacional found = find(DataMapper.vueloInternacionalDTOToVueloInternacional(newData));
-		if (found !=null) {
+	public boolean delete(VueloInternacionalDTO toDelete,VueloInternacionalDTO toDelete2,VueloInternacionalDTO toDelete3) {
+        VueloInternacional found = find(DataMapper.vueloInternacionalDTOToVueloInternacional(toDelete));
+        VueloInternacional found2 = find(DataMapper.vueloInternacionalDTOToVueloInternacional(toDelete2));
+        VueloInternacional found3 = find(DataMapper.vueloInternacionalDTOToVueloInternacional(toDelete3));
+        if (found != null&&found2 != null&&found3 != null) {
+            listaVueloInternacional.remove(found);
+            writeFile();
+            writeSerialized();
+            return true; 
+        } else {
+            return false;
+        }
+    }
+	@Override
+	public boolean update(VueloInternacionalDTO previous, VueloInternacionalDTO newData,VueloInternacionalDTO previous2, VueloInternacionalDTO newData2,VueloInternacionalDTO previous3, VueloInternacionalDTO newData3) {
+		VueloInternacional found = find(DataMapper.vueloInternacionalDTOToVueloInternacional(previous));
+		VueloInternacional found2 = find(DataMapper.vueloInternacionalDTOToVueloInternacional(previous2));
+		VueloInternacional found3 = find(DataMapper.vueloInternacionalDTOToVueloInternacional(previous3));
+		if (found != null&&found2 != null&&found3 !=null) {
 			listaVueloInternacional.remove(found);
+			listaVueloInternacional.remove(found2);
+			listaVueloInternacional.remove(found3);
 			listaVueloInternacional.add(DataMapper.vueloInternacionalDTOToVueloInternacional(newData));
+			listaVueloInternacional.add(DataMapper.vueloInternacionalDTOToVueloInternacional(newData2));
+			listaVueloInternacional.add(DataMapper.vueloInternacionalDTOToVueloInternacional(newData3));
 			writeFile();
 			writeSerialized();
 			return true;
 		} else {
 			return false;
+		}
 	}
-
-
-}
 	
 	public void writeFile() {
 		String content = "";

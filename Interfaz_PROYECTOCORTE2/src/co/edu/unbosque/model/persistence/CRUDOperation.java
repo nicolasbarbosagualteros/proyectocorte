@@ -10,10 +10,10 @@ public interface CRUDOperation <D, E>{//D -> DTO || E -> Entidad
 	
 	public boolean add(D newData); //ahora verifico que no haya duplicados c:
 	
-	public boolean delete(D toDelete); //eliminar
+	public boolean delete(D toDelete, D toDelete2, D toDelete3); //eliminar
 	
 	public E find(E toFind); //to buscar; verificar si existe o no; null -> no existe
 	
-	public boolean update(D previous, D newData); //actualizarr
+	public boolean update(D previous, D newData,D previous2, D newData2,D previous3, D newData4); //actualizarr
 	
 }

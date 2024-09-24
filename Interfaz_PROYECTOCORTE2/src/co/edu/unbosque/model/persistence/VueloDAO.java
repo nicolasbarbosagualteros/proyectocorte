@@ -41,9 +41,11 @@ public class VueloDAO implements CRUDOperation<VueloDTO, Vuelo>{
 	}
 
 	@Override
-	public boolean delete(VueloDTO toDelete) {
+	public boolean delete(VueloDTO toDelete,VueloDTO toDelete2,VueloDTO toDelete3) {
 		Vuelo found = find(DataMapper.vueloDTOToVuelo(toDelete));
-		if (found != null) {
+		Vuelo found2 = find(DataMapper.vueloDTOToVuelo(toDelete2));
+		Vuelo found3 = find(DataMapper.vueloDTOToVuelo(toDelete3));
+		if (found != null&&found2 != null&&found3 != null) {
 			writeFile();
 			writeSerialized();
 			return listaVuelo.remove(found);
@@ -72,7 +74,7 @@ public class VueloDAO implements CRUDOperation<VueloDTO, Vuelo>{
 	}
 
 	@Override
-	public boolean update(VueloDTO previous, VueloDTO newData) {
+	public boolean update(VueloDTO previous, VueloDTO newData,VueloDTO previous2, VueloDTO newData2,VueloDTO previous3, VueloDTO newData3) {
 	
 		Vuelo found = find(DataMapper.vueloDTOToVuelo(newData));
 		if (found !=null) {

@@ -162,7 +162,8 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelAddNacional().getLabelCombo().setForeground(Color.WHITE);
 			vf.getWindow().getPanelAddNacional().getLabelNombrePiloto().setForeground(Color.WHITE);
 			vf.getWindow().getPanelAddNacional().getLabelNombreCopiloto().setForeground(Color.WHITE);
-
+			vf.getWindow().getPanelAddNacional().getLabelListaPilotos().setForeground(Color.WHITE);
+			
 			vf.getWindow().getPanelUpdateNacional().getLblBright().setVisible(false);
 			vf.getWindow().getPanelUpdateNacional().getLblDark().setVisible(true);
 			vf.getWindow().getPanelUpdateNacional().getBtnBack().setVisible(false);
@@ -178,6 +179,7 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelUpdateNacional().getLabelListaVuelos().setForeground(Color.WHITE);
 			vf.getWindow().getPanelUpdateNacional().getLabelNombrePiloto().setForeground(Color.WHITE);
 			vf.getWindow().getPanelUpdateNacional().getLabelNombreCopiloto().setForeground(Color.WHITE);
+			vf.getWindow().getPanelUpdateNacional().getLabelListaPilotos().setForeground(Color.WHITE);
 
 			vf.getWindow().getPanelDeleteNacional().getLblBright().setVisible(false);
 			vf.getWindow().getPanelDeleteNacional().getLblDark().setVisible(true);
@@ -187,6 +189,8 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelDeleteNacional().getBtnDeleteDark().setVisible(true);
 			vf.getWindow().getPanelDeleteNacional().getListaVuelos().setForeground(Color.WHITE);
 			vf.getWindow().getPanelDeleteNacional().getLblDatoEliminar().setForeground(Color.WHITE);
+			vf.getWindow().getPanelDeleteNacional().getLblDatoEliminar2().setForeground(Color.WHITE);
+			vf.getWindow().getPanelDeleteNacional().getLblDatoEliminar3().setForeground(Color.WHITE);
 
 			vf.getWindow().getMainPanelInternacional().setBackground(new Color(20, 20, 20));
 			vf.getWindow().getPanelAddInternacional().setBackground(new Color(20, 20, 20));
@@ -228,6 +232,7 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelAddInternacional().getLabelCombo().setForeground(Color.WHITE);
 			vf.getWindow().getPanelAddInternacional().getLabelNombrePiloto().setForeground(Color.WHITE);
 			vf.getWindow().getPanelAddInternacional().getLabelNombreCopiloto().setForeground(Color.WHITE);
+			vf.getWindow().getPanelAddInternacional().getLabelListaPilotos().setForeground(Color.WHITE);
 
 			vf.getWindow().getPanelUpdateInternacional().getLblBright().setVisible(false);
 			vf.getWindow().getPanelUpdateInternacional().getLblDark().setVisible(true);
@@ -244,6 +249,7 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelUpdateInternacional().getLabelListaVuelos().setForeground(Color.WHITE);
 			vf.getWindow().getPanelUpdateInternacional().getLabelNombrePiloto().setForeground(Color.WHITE);
 			vf.getWindow().getPanelUpdateInternacional().getLabelNombreCopiloto().setForeground(Color.WHITE);
+			vf.getWindow().getPanelUpdateInternacional().getLabelListaPilotos().setForeground(Color.WHITE);
 
 			vf.getWindow().getPanelDeleteInternacional().getLblBright().setVisible(false);
 			vf.getWindow().getPanelDeleteInternacional().getLblDark().setVisible(true);
@@ -253,6 +259,8 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelDeleteInternacional().getBtnDeleteDark().setVisible(true);
 			vf.getWindow().getPanelDeleteInternacional().getListaVuelos().setForeground(Color.WHITE);
 			vf.getWindow().getPanelDeleteInternacional().getLblDatoEliminar().setForeground(Color.WHITE);
+			vf.getWindow().getPanelDeleteInternacional().getLblDatoEliminar2().setForeground(Color.WHITE);
+			vf.getWindow().getPanelDeleteInternacional().getLblDatoEliminar3().setForeground(Color.WHITE);
 
 			vf.getWindow().revalidate();
 			vf.getWindow().repaint();
@@ -321,6 +329,7 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelAddNacional().getLabelCombo().setForeground(Color.BLACK);
 			vf.getWindow().getPanelAddNacional().getLabelNombrePiloto().setForeground(Color.BLACK);
 			vf.getWindow().getPanelAddNacional().getLabelNombreCopiloto().setForeground(Color.BLACK);
+			vf.getWindow().getPanelAddNacional().getLabelListaPilotos().setForeground(Color.BLACK);
 
 			vf.getWindow().getPanelUpdateNacional().getLblBright().setVisible(true);
 			vf.getWindow().getPanelUpdateNacional().getLblDark().setVisible(false);
@@ -337,6 +346,7 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelUpdateNacional().getLabelListaVuelos().setForeground(Color.BLACK);
 			vf.getWindow().getPanelUpdateNacional().getLabelNombrePiloto().setForeground(Color.BLACK);
 			vf.getWindow().getPanelUpdateNacional().getLabelNombreCopiloto().setForeground(Color.BLACK);
+			vf.getWindow().getPanelUpdateNacional().getLabelListaPilotos().setForeground(Color.BLACK);
 
 			vf.getWindow().getPanelDeleteNacional().getLblBright().setVisible(true);
 			vf.getWindow().getPanelDeleteNacional().getLblDark().setVisible(false);
@@ -346,6 +356,10 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelDeleteNacional().getBtnDeleteDark().setVisible(false);
 			vf.getWindow().getPanelDeleteNacional().getListaVuelos().setForeground(Color.BLACK);
 			vf.getWindow().getPanelDeleteNacional().getLblDatoEliminar().setForeground(Color.BLACK);
+			vf.getWindow().getPanelDeleteNacional().getLblDatoEliminar2().setForeground(Color.BLACK);
+			vf.getWindow().getPanelDeleteNacional().getLblDatoEliminar3().setForeground(Color.BLACK);
+			
+			
 
 			vf.getWindow().getMainPanelInternacional().setBackground(new Color(241, 241, 236));
 			vf.getWindow().getPanelAddInternacional().setBackground(new Color(241, 241, 236));
@@ -387,7 +401,8 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelAddInternacional().getLabelCombo().setForeground(Color.BLACK);
 			vf.getWindow().getPanelAddInternacional().getLabelNombrePiloto().setForeground(Color.BLACK);
 			vf.getWindow().getPanelAddInternacional().getLabelNombreCopiloto().setForeground(Color.BLACK);
-
+			vf.getWindow().getPanelAddInternacional().getLabelListaPilotos().setForeground(Color.BLACK);
+			
 			vf.getWindow().getPanelUpdateInternacional().getLblBright().setVisible(true);
 			vf.getWindow().getPanelUpdateInternacional().getLblDark().setVisible(false);
 			vf.getWindow().getPanelUpdateInternacional().getBtnBack().setVisible(true);
@@ -403,6 +418,7 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelUpdateInternacional().getLabelListaVuelos().setForeground(Color.BLACK);
 			vf.getWindow().getPanelUpdateInternacional().getLabelNombrePiloto().setForeground(Color.BLACK);
 			vf.getWindow().getPanelUpdateInternacional().getLabelNombreCopiloto().setForeground(Color.BLACK);
+			vf.getWindow().getPanelUpdateInternacional().getLabelListaPilotos().setForeground(Color.BLACK);
 
 			vf.getWindow().getPanelDeleteInternacional().getLblBright().setVisible(true);
 			vf.getWindow().getPanelDeleteInternacional().getLblDark().setVisible(false);
@@ -412,7 +428,9 @@ public class Controller implements ActionListener {
 			vf.getWindow().getPanelDeleteInternacional().getBtnDeleteDark().setVisible(false);
 			vf.getWindow().getPanelDeleteInternacional().getListaVuelos().setForeground(Color.BLACK);
 			vf.getWindow().getPanelDeleteInternacional().getLblDatoEliminar().setForeground(Color.BLACK);
-
+			vf.getWindow().getPanelDeleteInternacional().getLblDatoEliminar2().setForeground(Color.BLACK);
+			vf.getWindow().getPanelDeleteInternacional().getLblDatoEliminar3().setForeground(Color.BLACK);
+			
 			vf.getWindow().revalidate();
 			vf.getWindow().repaint();
 
@@ -604,8 +622,10 @@ public class Controller implements ActionListener {
 			vf.getWindow().revalidate();
 			vf.getWindow().repaint();
 		} else if (e.getSource() == vf.getWindow().getPanelUpdateNacional().getBtnUpdate()) {
+			updateNacional();
 
 		} else if (e.getSource() == vf.getWindow().getPanelUpdateNacional().getBtnUpdateDark()) {
+			updateNacional();
 
 		} else if (e.getSource() == vf.getWindow().getPanelDeleteNacional().getBtnBack()) {
 			vf.getWindow().remove(vf.getWindow().getPanelDeleteNacional());
@@ -618,9 +638,10 @@ public class Controller implements ActionListener {
 			vf.getWindow().revalidate();
 			vf.getWindow().repaint();
 		} else if (e.getSource() == vf.getWindow().getPanelDeleteNacional().getBtnDelete()) {
-
+			//deleteNacional();
+		
 		} else if (e.getSource() == vf.getWindow().getPanelDeleteNacional().getBtnDeleteDark()) {
-
+			//deleteNacional();
 		} else if (e.getSource() == vf.getWindow().getMainPanelInternacional().getBtnBack()) {
 			vf.getWindow().remove(vf.getWindow().getMainPanelInternacional());
 			vf.getWindow().add(vf.getWindow().getMainPanel());
@@ -868,12 +889,102 @@ public class Controller implements ActionListener {
 	}
 
 	public void updateNacional() {
+	
+		String newData = vf.getWindow().getPanelUpdateNacional().getNewData().getText();
+		
+		
+		
+		String airline = vf.getWindow().getPanelUpdateNacional().getNomEmpresa().getSelectedItem().toString();
+		try {
+			ExceptionChecker.verificarEspaciosVacios(airline);
+		} catch (EmptyTextException e) {
+			vf.getWindow().getPopUpWindow().espaciosVacios();
+		}
 
+		String numPassengers = vf.getWindow().getPanelUpdateNacional().getNumPasajeros().getText();
+
+		try {
+			ExceptionChecker.verificarEspaciosVacios(numPassengers);
+			int pasajeros = Integer.parseInt(numPassengers);
+			ExceptionChecker.verificarNumeroPasajeros(pasajeros);
+			ExceptionChecker.verificarNombre(numPassengers);
+		} catch (EmptyTextException e) {
+			vf.getWindow().getPopUpWindow().espaciosVacios();
+		} catch (PassengerNumberException e) {
+			vf.getWindow().getPopUpWindow().numeroPasajerosErroneo();
+		} catch (InputTextNotValidException e) {
+			vf.getWindow().getPopUpWindow().nombreInvalido();
+		}
+
+		String captain = vf.getWindow().getPanelUpdateNacional().getNombrePiloto().getText();
+		try {
+			ExceptionChecker.verificarEspaciosVacios(captain);
+			ExceptionChecker.verificarNombre(captain);
+		} catch (EmptyTextException e) {
+			vf.getWindow().getPopUpWindow().espaciosVacios();
+		} catch (InputTextNotValidException e) {
+			vf.getWindow().getPopUpWindow().nombreInvalido();
+		}
+
+		String copilot = vf.getWindow().getPanelUpdateNacional().getNombreCopiloto().getText();
+		try {
+			ExceptionChecker.verificarEspaciosVacios(copilot);
+			ExceptionChecker.verificarNombre(copilot);
+		} catch (EmptyTextException e) {
+			vf.getWindow().getPopUpWindow().espaciosVacios();
+		} catch (InputTextNotValidException e) {
+			vf.getWindow().getPopUpWindow().nombreInvalido();
+		}
+
+		String arrival = vf.getWindow().getPanelUpdateNacional().getHoraLlegada().getText();
+		try {
+			ExceptionChecker.verificarEspaciosVacios(arrival);
+
+		} catch (EmptyTextException e) {
+			vf.getWindow().getPopUpWindow().espaciosVacios();
+		}
+
+		String departure = vf.getWindow().getPanelUpdateNacional().getHoraSalida().getText();
+		try {
+			ExceptionChecker.verificarEspaciosVacios(departure);
+
+		} catch (EmptyTextException e) {
+			vf.getWindow().getPopUpWindow().espaciosVacios();
+		}
+
+		int fuel = Integer.parseInt(vf.getWindow().getPanelUpdateNacional().getNumPasajeros().getText()) * 600;
+		String fuelWeight = String.valueOf(fuel);
+
+		int packageW = Integer.parseInt(numPassengers) * 10;
+		String packageWeight = String.valueOf(packageW);
+
+		String motorType = vf.getWindow().getPanelUpdateNacional().getTurbinaOHelice().getSelectedItem().toString();
+		try {
+			ExceptionChecker.verificarEspaciosVacios(motorType);
+		} catch (EmptyTextException e) {
+			vf.getWindow().getPopUpWindow().espaciosVacios();
+		}
+		
+		
+		
+		//mf.getVueloNacionalDAO().update(new VueloNacionalDTO(null, null, newData,null,null,null,null,null,null), new VueloNacionalDTO(airline, numPassengers, captain, copilot, arrival, departure,
+		//		fuelWeight, packageWeight, motorType));
+		
+		
+		
 	}
 
-	public void deleteNacional() {
-
-	}
+	//public void deleteNacional() {
+	//	String datoEliminar = vf.getWindow().getPanelDeleteNacional().getDatoEliminar().getText();
+	//	VueloNacionalDTO vuelonacionaldto = new  VueloNacionalDTO();
+		//vuelonacionaldto.setNombreCapitan(datoEliminar);
+		/*boolean opcion = mf.getVueloNacionalDAO().delete(vuelonacionaldto);
+		if(opcion) {
+			vf.getWindow().getPopUpWindow().eliminado();
+		} else {
+			vf.getWindow().getPopUpWindow().noEliminado();
+		}
+	}*/
 
 	public void addInternacional() {
 

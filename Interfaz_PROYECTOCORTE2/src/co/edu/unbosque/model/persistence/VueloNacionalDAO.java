@@ -2,7 +2,8 @@ package co.edu.unbosque.model.persistence;
 
 import java.util.ArrayList;
 
-
+import co.edu.unbosque.model.VueloNacional;
+import co.edu.unbosque.model.VueloNacionalDTO;
 import co.edu.unbosque.model.VueloNacional;
 import co.edu.unbosque.model.VueloNacionalDTO;
 
@@ -18,30 +19,42 @@ import co.edu.unbosque.model.VueloNacionalDTO;
 			readSerialized();		
 		}
 		
-		@Override
-		public ArrayList<VueloNacionalDTO> getAll() {
-		
-			return DataMapper.listaVueloNacionalToListaVueloNacionalDTO(listaVueloNacional);
-		}
-		
+
 		@Override
 		public String showAll() {
 			String rta = "";
 			if (listaVueloNacional.isEmpty()) {
-				return "No hay vuelos ";
+				return "";
 			} else {
-				for (VueloNacional vueloNacional : listaVueloNacional) {
-					rta += vueloNacional;
+				for (VueloNacional t : listaVueloNacional) {
+					rta += t;
+					readFile();
 				}
 				return rta;
 			}
 		}
 
-		
+		/**
+		 * Retorna todos los elementos de VueloNacional en una lista de VueloNacionalDTO.
+		 * 
+		 * @return Lista de VueloNacionalDTO.
+		 */
+
+		@Override
+		public ArrayList<VueloNacionalDTO> getAll() {
+			return DataMapper.listaVueloNacionalToListaVueloNacionalDTO(listaVueloNacional);
+		}
+
+		/**
+		 * Agrega un nuevo bus VueloNacional a la lista si no existe un duplicado.
+		 * 
+		 * @param newData El objeto VueloNacionalDTO que representa el nuevo bus.
+		 * @return true si el bus se agregó correctamente, false si ya existe.
+		 */
 
 		@Override
 		public boolean add(VueloNacionalDTO newData) {
-			if(find(DataMapper.vueloNacionalDTOToVueloNacional(newData))==null) {
+			if (find(DataMapper.vueloNacionalDTOToVueloNacional(newData)) == null) {
 				listaVueloNacional.add(DataMapper.vueloNacionalDTOToVueloNacional(newData));
 				writeFile();
 				writeSerialized();
@@ -51,30 +64,30 @@ import co.edu.unbosque.model.VueloNacionalDTO;
 			}
 		}
 
-		@Override
-		public boolean delete(VueloNacionalDTO toDelete) {
-			VueloNacional found = find(DataMapper.vueloNacionalDTOToVueloNacional(toDelete));
-			if (found != null) {
-				listaVueloNacional.remove(found);
-				writeFile();
-				writeSerialized();
-				return true;
+		/**
+		 * Elimina un bus VueloNacional de la lista.
+		 * 
+		 * @param toDelete El objeto VueloNacionalDTO que representa el bus a eliminar.
+		 * @return true si el bus fue eliminado, false si no se encontró.
+		 */
+		
 
-			} else {
-				return false;
-			}
-		}
-
+		/**
+		 * Busca un bus VueloNacional en la lista por su placa.
+		 * 
+		 * @param toFind El objeto VueloNacional que se desea encontrar.
+		 * @return El objeto VueloNacional encontrado, o null si no se encuentra.
+		 */
 		@Override
 		public VueloNacional find(VueloNacional toFind) {
 			VueloNacional found = null;
-			if(!listaVueloNacional.isEmpty()){
-				for(VueloNacional vueloNacional : listaVueloNacional) {
-					if(vueloNacional.getNombreCapitan().equals(toFind.getNombreCapitan())) {
-						found = vueloNacional;
+			if (!listaVueloNacional.isEmpty()) {
+				for (VueloNacional VueloNacional : listaVueloNacional) {
+					if (VueloNacional.getNombreCapitan().equals(toFind.getNombreCapitan())) {
+						found = VueloNacional;
 						return found;
 					} else {
-						continue; 
+						continue; // las sig lineas desps de continue no se ejecutan, saltan a la sig iteracion
 					}
 				}
 			} else {
@@ -83,23 +96,47 @@ import co.edu.unbosque.model.VueloNacionalDTO;
 			return null;
 		}
 
+		/**
+		 * Actualiza un bus VueloNacional existente en la lista.
+		 * 
+		 * @param previous El objeto VueloNacionalDTO que representa el bus anterior.
+		 * @param newData  El objeto VueloNacionalDTO con los nuevos datos del bus.
+		 * @return true si el bus fue actualizado correctamente, false si no se
+		 *         encontró.
+		 */
 		@Override
-		public boolean update(VueloNacionalDTO previous, VueloNacionalDTO newData) {
-		
-			VueloNacional found = find(DataMapper.vueloNacionalDTOToVueloNacional(newData));
-			if (found !=null) {
+		public boolean delete(VueloNacionalDTO toDelete,VueloNacionalDTO toDelete2,VueloNacionalDTO toDelete3) {
+	        VueloNacional found = find(DataMapper.vueloNacionalDTOToVueloNacional(toDelete));
+	        VueloNacional found2 = find(DataMapper.vueloNacionalDTOToVueloNacional(toDelete2));
+	        VueloNacional found3 = find(DataMapper.vueloNacionalDTOToVueloNacional(toDelete3));
+	        if (found != null&&found2 != null&&found3 != null) {
+	            listaVueloNacional.remove(found);
+	            writeFile();
+	            writeSerialized();
+	            return true; 
+	        } else {
+	            return false;
+	        }
+	    }
+		@Override
+		public boolean update(VueloNacionalDTO previous, VueloNacionalDTO newData,VueloNacionalDTO previous2, VueloNacionalDTO newData2,VueloNacionalDTO previous3, VueloNacionalDTO newData3) {
+			VueloNacional found = find(DataMapper.vueloNacionalDTOToVueloNacional(previous));
+			VueloNacional found2 = find(DataMapper.vueloNacionalDTOToVueloNacional(previous2));
+			VueloNacional found3 = find(DataMapper.vueloNacionalDTOToVueloNacional(previous3));
+			if (found != null&&found2 != null&&found3 !=null) {
 				listaVueloNacional.remove(found);
+				listaVueloNacional.remove(found2);
+				listaVueloNacional.remove(found3);
 				listaVueloNacional.add(DataMapper.vueloNacionalDTOToVueloNacional(newData));
+				listaVueloNacional.add(DataMapper.vueloNacionalDTOToVueloNacional(newData2));
+				listaVueloNacional.add(DataMapper.vueloNacionalDTOToVueloNacional(newData3));
 				writeFile();
 				writeSerialized();
 				return true;
 			} else {
 				return false;
+			}
 		}
-
-
-	}
-		
 		public void writeFile() {
 			String content = "";
 			for (VueloNacional vueloNacional : listaVueloNacional) {
@@ -114,7 +151,6 @@ import co.edu.unbosque.model.VueloNacionalDTO;
 				content += vueloNacional.getTipoMotor();
 				content += "\n";
 			}
-
 			FileHandler.writeFile(FILE_NAME, content);
 		}
 

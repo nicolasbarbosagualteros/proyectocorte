@@ -22,14 +22,14 @@ public class MainPanelInternacional extends JPanel {
 		setBackground(new Color(241, 241, 236));
 
 		Image imageLblBright = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/lblBright.jpeg").getImage();
+				"assets/lblBright.jpeg").getImage();
 		ImageIcon imageIconLblBright = new ImageIcon(imageLblBright.getScaledInstance(800, 120, Image.SCALE_SMOOTH));
 		lblBright = new JLabel();
 		lblBright.setIcon(imageIconLblBright);
 		lblBright.setBounds(0, -40, 800, 120);
 		
 		Image imageLblDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/lblDark.png").getImage();
+				"assets/lblDark.png").getImage();
 		ImageIcon imageIconLblDark = new ImageIcon(imageLblDark.getScaledInstance(800, 120, Image.SCALE_SMOOTH));
 		lblDark = new JLabel();
 		lblDark.setIcon(imageIconLblDark);
@@ -37,7 +37,7 @@ public class MainPanelInternacional extends JPanel {
 		lblDark.setVisible(false);
 
 		Image imageLblLogo = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/logoDorado.png").getImage();
+				"assets/logoDorado.png").getImage();
 		ImageIcon imageIconLblLogo = new ImageIcon(imageLblLogo.getScaledInstance(400, 56, Image.SCALE_SMOOTH));
 		lblLogo = new JLabel();
 		lblLogo.setIcon(imageIconLblLogo);
@@ -46,7 +46,7 @@ public class MainPanelInternacional extends JPanel {
 		add(lblLogo);
 		
 		Image imageLblLogoDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/logoDoradoDark.png").getImage();
+				"assets/logoDoradoDark.png").getImage();
 		ImageIcon imageIconLblLogoDark = new ImageIcon(imageLblLogoDark.getScaledInstance(400, 56, Image.SCALE_SMOOTH));
 		lblLogoDark = new JLabel();
 		lblLogoDark.setIcon(imageIconLblLogoDark);
@@ -55,7 +55,7 @@ public class MainPanelInternacional extends JPanel {
 		add(lblLogoDark);
 
 		Image imageBtnAdd = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/addBright.png").getImage();
+				"assets/addBright.png").getImage();
 		ImageIcon imageIconBtnAdd = new ImageIcon(imageBtnAdd.getScaledInstance(170, 169, Image.SCALE_SMOOTH));
 		btnAdd = new JButton();
 		btnAdd.setIcon(imageIconBtnAdd);
@@ -68,7 +68,7 @@ public class MainPanelInternacional extends JPanel {
 		add(btnAdd);
 		
 		Image imageBtnAddDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/addDark.png").getImage();
+				"assets/addDark.png").getImage();
 		ImageIcon imageIconBtnAddDark = new ImageIcon(imageBtnAddDark.getScaledInstance(170, 169, Image.SCALE_SMOOTH));
 		btnAddDark = new JButton();
 		btnAddDark.setIcon(imageIconBtnAddDark);
@@ -81,7 +81,7 @@ public class MainPanelInternacional extends JPanel {
 		add(btnAddDark);
 
 		Image imageBtnUpdate = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/updateBright.png").getImage();
+				"assets/updateBright.png").getImage();
 		ImageIcon imageIconBtnUpdate = new ImageIcon(imageBtnUpdate.getScaledInstance(170, 169, Image.SCALE_SMOOTH));
 		btnUpdate = new JButton();
 		btnUpdate.setIcon(imageIconBtnUpdate);
@@ -94,7 +94,7 @@ public class MainPanelInternacional extends JPanel {
 		add(btnUpdate);
 		
 		Image imageBtnUpdateDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/updateDark.png").getImage();
+				"assets/updateDark.png").getImage();
 		ImageIcon imageIconBtnUpdateDark = new ImageIcon(imageBtnUpdateDark.getScaledInstance(170, 169, Image.SCALE_SMOOTH));
 		btnUpdateDark = new JButton();
 		btnUpdateDark.setIcon(imageIconBtnUpdateDark);
@@ -108,7 +108,7 @@ public class MainPanelInternacional extends JPanel {
 		
 
 		Image imageBtnDelete = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/deleteBright.png").getImage();
+				"assets/deleteBright.png").getImage();
 		ImageIcon imageIconBtnDelete = new ImageIcon(imageBtnDelete.getScaledInstance(170, 169, Image.SCALE_SMOOTH));
 		btnDelete = new JButton();
 		btnDelete.setIcon(imageIconBtnDelete);
@@ -121,7 +121,7 @@ public class MainPanelInternacional extends JPanel {
 		add(btnDelete);
 		
 		Image imageBtnDeleteDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/deleteDark.png").getImage();
+				"assets/deleteDark.png").getImage();
 		ImageIcon imageIconBtnDeleteDark = new ImageIcon(imageBtnDeleteDark.getScaledInstance(170, 169, Image.SCALE_SMOOTH));
 		btnDeleteDark = new JButton();
 		btnDeleteDark.setIcon(imageIconBtnDeleteDark);
@@ -135,7 +135,7 @@ public class MainPanelInternacional extends JPanel {
 
 
 		Image imageBtnBack = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/backBright.png").getImage();
+				"assets/backBright.png").getImage();
 		ImageIcon imageIconBtnBack = new ImageIcon(imageBtnBack.getScaledInstance(200, 100, Image.SCALE_SMOOTH));
 		btnBack = new JButton();
 		btnBack.setIcon(imageIconBtnBack);
@@ -150,7 +150,7 @@ public class MainPanelInternacional extends JPanel {
 		
 		
 		Image imageBtnBackDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/backDark.png").getImage();
+				"assets/backDark.png").getImage();
 		ImageIcon imageIconBtnBackDark = new ImageIcon(imageBtnBackDark.getScaledInstance(200, 100, Image.SCALE_SMOOTH));
 		btnBackDark = new JButton();
 		btnBackDark.setIcon(imageIconBtnBackDark);

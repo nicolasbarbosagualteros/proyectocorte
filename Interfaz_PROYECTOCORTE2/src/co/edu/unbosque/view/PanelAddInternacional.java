@@ -10,14 +10,15 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class PanelAddInternacional extends JPanel {
 
 	private JButton btnBack, btnAdd,btnBackDark, btnAddDark;
-	private JTextArea numPasajeros, horaSalida, horaLlegada, numVisa, nombrePiloto, nombreCopiloto;
+	private JTextArea numPasajeros, horaSalida, horaLlegada, numVisa, nombrePiloto, nombreCopiloto, listaPilotos;
 	private JComboBox nomEmpresa;
-	private JLabel lblBright,lblDark, avianca, latam, wingo, emirates, labelPasajeros, labelEmpresa, labelHoraSalida, labelHoraLLegada, labelCombo, labelNombrePiloto, labelNombreCopiloto, lblLogo, lblLogoDark ;
+	private JLabel lblBright,lblDark, avianca, latam, wingo, emirates, labelPasajeros, labelEmpresa, labelHoraSalida, labelHoraLLegada, labelCombo, labelNombrePiloto, labelNombreCopiloto, lblLogo, lblLogoDark, labelListaPilotos ;
 
 	public PanelAddInternacional() {
 
@@ -27,14 +28,14 @@ public class PanelAddInternacional extends JPanel {
 		setBackground(new Color(241, 241, 236));
 
 		Image imageLblBright = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/lblBright.jpeg").getImage();
+				"assets/lblBright.jpeg").getImage();
 		ImageIcon imageIconLblBright = new ImageIcon(imageLblBright.getScaledInstance(800, 120, Image.SCALE_SMOOTH));
 		lblBright = new JLabel();
 		lblBright.setIcon(imageIconLblBright);
 		lblBright.setBounds(0, -40, 800, 120);
 		
 		Image imageLblDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/lblDark.png").getImage();
+				"assets/lblDark.png").getImage();
 		ImageIcon imageIconLblDark = new ImageIcon(imageLblDark.getScaledInstance(800, 120, Image.SCALE_SMOOTH));
 		lblDark = new JLabel();
 		lblDark.setIcon(imageIconLblDark);
@@ -42,7 +43,7 @@ public class PanelAddInternacional extends JPanel {
 		lblDark.setVisible(false);
 
 		Image imageLblLogo = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/logoDorado.png").getImage();
+				"assets/logoDorado.png").getImage();
 		ImageIcon imageIconLblLogo = new ImageIcon(imageLblLogo.getScaledInstance(400, 56, Image.SCALE_SMOOTH));
 		lblLogo = new JLabel();
 		lblLogo.setIcon(imageIconLblLogo);
@@ -51,22 +52,22 @@ public class PanelAddInternacional extends JPanel {
 		add(lblLogo);
 		
 		Image imageLblLogoDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/logoDoradoDark.png").getImage();
+				"assets/logoDoradoDark.png").getImage();
 		ImageIcon imageIconLblLogoDark = new ImageIcon(imageLblLogoDark.getScaledInstance(400, 56, Image.SCALE_SMOOTH));
 		lblLogoDark = new JLabel();
 		lblLogoDark.setIcon(imageIconLblLogoDark);
 		lblLogoDark.setBounds(20, 15, 400, 56);
 		lblLogoDark.setVisible(false);
 		add(lblLogoDark);
-
+		
 		Image imageBtnAdd = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/addPlaneBrightpng.png")
+				"assets/addPlaneBrightpng.png")
 				.getImage();
-		ImageIcon imageIconBtnAdd = new ImageIcon(imageBtnAdd.getScaledInstance(138, 135, Image.SCALE_SMOOTH));
+		ImageIcon imageIconBtnAdd = new ImageIcon(imageBtnAdd.getScaledInstance(100, 100, Image.SCALE_SMOOTH));
 		btnAdd = new JButton();
 		btnAdd.setIcon(imageIconBtnAdd);
 		btnAdd.setToolTipText("Agregar vuelo");
-		btnAdd.setBounds(600, 140, 138, 135);
+		btnAdd.setBounds(400, 320, 100, 100);
 		btnAdd.setContentAreaFilled(false);
 		btnAdd.setBorderPainted(false);
 		btnAdd.setFocusPainted(false);
@@ -74,13 +75,13 @@ public class PanelAddInternacional extends JPanel {
 		add(btnAdd);
 		
 		Image imageBtnAddDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/addPlaneDark.png")
+				"assets/addPlaneDark.png")
 				.getImage();
-		ImageIcon imageIconBtnAddDark = new ImageIcon(imageBtnAddDark.getScaledInstance(138, 135, Image.SCALE_SMOOTH));
+		ImageIcon imageIconBtnAddDark = new ImageIcon(imageBtnAddDark.getScaledInstance(100, 100, Image.SCALE_SMOOTH));
 		btnAddDark = new JButton();
 		btnAddDark.setIcon(imageIconBtnAddDark);
 		btnAddDark.setToolTipText("Agregar vuelo");
-		btnAddDark.setBounds(600, 140, 138, 135);
+		btnAddDark.setBounds(400, 320, 100, 100);
 		btnAddDark.setContentAreaFilled(false);
 		btnAddDark.setBorderPainted(false);
 		btnAddDark.setFocusPainted(false);
@@ -142,13 +143,13 @@ public class PanelAddInternacional extends JPanel {
 
 		
 		numVisa = new JTextArea();
-		numVisa.setBounds(350, 115, 280, 40);
+		numVisa.setBounds(350, 115, 200, 40);
 		numVisa.setBackground(new Color(231, 233, 234));
 		numVisa.setFont(fonttxt);
 		add(numVisa);
 
 		Image imageBtnBack = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/backBright.png").getImage();
+				"assets/backBright.png").getImage();
 		ImageIcon imageIconBtnBack = new ImageIcon(imageBtnBack.getScaledInstance(200, 100, Image.SCALE_SMOOTH));
 		btnBack = new JButton();
 		btnBack.setIcon(imageIconBtnBack);
@@ -161,7 +162,7 @@ public class PanelAddInternacional extends JPanel {
 		add(btnBack);
 		
 		Image imageBtnBackDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/backDark.png").getImage();
+				"assets/backDark.png").getImage();
 		ImageIcon imageIconBtnBackDark = new ImageIcon(imageBtnBackDark.getScaledInstance(200, 100, Image.SCALE_SMOOTH));
 		btnBackDark = new JButton();
 		btnBackDark.setIcon(imageIconBtnBackDark);
@@ -197,10 +198,30 @@ public class PanelAddInternacional extends JPanel {
 		nombreCopiloto.setFont(fonttxt);
 		add(nombreCopiloto);
 
+		
+		
+
+		labelListaPilotos = new JLabel("Lista de pilotos:");
+		labelListaPilotos.setBounds(600, 80, 300, 30);
+		labelListaPilotos.setFont(fontlbl);
+		add(labelListaPilotos);
+		
+		listaPilotos = new JTextArea();
+		listaPilotos.setBounds(600,110, 190,210);
+		listaPilotos.setBackground(new Color(231, 233, 234));
+		add(listaPilotos);
+		
+		JScrollPane scroll = new JScrollPane(listaPilotos);
+		scroll.setBounds(600,110, 190,210);
+		
+		add(scroll);
+		
+		
+		
 		avianca = new JLabel();
 		avianca.setBounds(500, 5, 300, 59);
 		Image imageAvianca = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/avianca.png").getImage();
+				"assets/avianca.png").getImage();
 		ImageIcon imageIconAvianca = new ImageIcon(imageAvianca.getScaledInstance(250, 59, Image.SCALE_SMOOTH));
 		avianca.setIcon(imageIconAvianca);
 		avianca.setVisible(false);
@@ -208,7 +229,7 @@ public class PanelAddInternacional extends JPanel {
 		 latam = new JLabel();
 		latam.setBounds(500, 5, 250, 59);
 		Image imageLatam = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/latam.png").getImage();
+				"assets/latam.png").getImage();
 		ImageIcon imageIconLatam = new ImageIcon(imageLatam.getScaledInstance(250, 59, Image.SCALE_SMOOTH));
 		latam.setIcon(imageIconLatam);
 		latam.setVisible(false);
@@ -216,7 +237,7 @@ public class PanelAddInternacional extends JPanel {
 		 wingo = new JLabel();
 		 wingo.setBounds(500, 5, 250, 70);
 		Image imageWingo = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/wingo.png").getImage();
+				"assets/wingo.png").getImage();
 		ImageIcon imageIconWingo = new ImageIcon(imageWingo.getScaledInstance(250, 70, Image.SCALE_SMOOTH));
 		wingo.setIcon(imageIconWingo);
 		wingo.setVisible(false);
@@ -224,7 +245,7 @@ public class PanelAddInternacional extends JPanel {
 		 emirates = new JLabel();
 		emirates.setBounds(600, 0, 110, 75);
 		Image imageEmirates = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/emirates.png").getImage();
+				"assets/emirates.png").getImage();
 		ImageIcon imageIconEmirates = new ImageIcon(imageEmirates.getScaledInstance(110, 75, Image.SCALE_SMOOTH));
 		emirates.setIcon(imageIconEmirates);
 		emirates.setVisible(false);
@@ -446,6 +467,22 @@ public class PanelAddInternacional extends JPanel {
 
 	public void setLblLogoDark(JLabel lblLogoDark) {
 		this.lblLogoDark = lblLogoDark;
+	}
+
+	public JTextArea getListaPilotos() {
+		return listaPilotos;
+	}
+
+	public void setListaPilotos(JTextArea listaPilotos) {
+		this.listaPilotos = listaPilotos;
+	}
+
+	public JLabel getLabelListaPilotos() {
+		return labelListaPilotos;
+	}
+
+	public void setLabelListaPilotos(JLabel labelListaPilotos) {
+		this.labelListaPilotos = labelListaPilotos;
 	}
 
 	

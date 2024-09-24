@@ -10,14 +10,15 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class PanelUpdateNacional extends JPanel {
 
 	private JButton btnBack, btnUpdate,btnBackDark, btnUpdateDark;
-	private JTextArea newData, numPasajeros, horaSalida, horaLlegada, vuelos, nombrePiloto, nombreCopiloto;
+	private JTextArea newData, numPasajeros, horaSalida, horaLlegada, vuelos, nombrePiloto, nombreCopiloto, listaPilotos;
 	private JComboBox nomEmpresa, turbinaOHelice;
-	private JLabel lblBright,lblDark, avianca, latam, wingo, emirates, labelNewData,labelPasajeros, labelEmpresa, labelHoraSalida, labelHoraLLegada, labelCombo, labelListaVuelos, lblLogo, lblLogoDark, labelNombrePiloto, labelNombreCopiloto;
+	private JLabel lblBright,lblDark, avianca, latam, wingo, emirates, labelNewData,labelPasajeros, labelEmpresa, labelHoraSalida, labelHoraLLegada, labelCombo, labelListaVuelos, lblLogo, lblLogoDark, labelNombrePiloto, labelNombreCopiloto, labelListaPilotos;
 	
 	public PanelUpdateNacional() {
 
@@ -27,14 +28,14 @@ public class PanelUpdateNacional extends JPanel {
 		setBackground(new Color(241, 241, 236));
 
 		Image imageLblBright = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/lblBright.jpeg").getImage();
+				"assets/lblBright.jpeg").getImage();
 		ImageIcon imageIconLblBright = new ImageIcon(imageLblBright.getScaledInstance(800, 120, Image.SCALE_SMOOTH));
 		lblBright = new JLabel();
 		lblBright.setIcon(imageIconLblBright);
 		lblBright.setBounds(0, -40, 800, 120);
 
 		Image imageLblDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/lblDark.png").getImage();
+				"assets/lblDark.png").getImage();
 		ImageIcon imageIconLblDark = new ImageIcon(imageLblDark.getScaledInstance(800, 120, Image.SCALE_SMOOTH));
 		lblDark = new JLabel();
 		lblDark.setIcon(imageIconLblDark);
@@ -42,7 +43,7 @@ public class PanelUpdateNacional extends JPanel {
 		lblDark.setVisible(false);
 		
 		Image imageLblLogo = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/logoDorado.png").getImage();
+				"assets/logoDorado.png").getImage();
 		ImageIcon imageIconLblLogo = new ImageIcon(imageLblLogo.getScaledInstance(400, 56, Image.SCALE_SMOOTH));
 		lblLogo = new JLabel();
 		lblLogo.setIcon(imageIconLblLogo);
@@ -51,7 +52,7 @@ public class PanelUpdateNacional extends JPanel {
 		add(lblLogo);
 		
 		Image imageLblLogoDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/logoDoradoDark.png").getImage();
+				"assets/logoDoradoDark.png").getImage();
 		ImageIcon imageIconLblLogoDark = new ImageIcon(imageLblLogoDark.getScaledInstance(400, 56, Image.SCALE_SMOOTH));
 		lblLogoDark = new JLabel();
 		lblLogoDark.setIcon(imageIconLblLogoDark);
@@ -60,7 +61,7 @@ public class PanelUpdateNacional extends JPanel {
 		add(lblLogoDark);
 
 		Image imageBtnAdd = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/updatePlaneBright.png")
+				"assets/updatePlaneBright.png")
 				.getImage();
 		ImageIcon imageIconBtnAdd = new ImageIcon(imageBtnAdd.getScaledInstance(150, 106, Image.SCALE_SMOOTH));
 		btnUpdate = new JButton();
@@ -74,7 +75,7 @@ public class PanelUpdateNacional extends JPanel {
 		add(btnUpdate);
 		
 		Image imageBtnAddDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/updatePlaneDark.png")
+				"assets/updatePlaneDark.png")
 				.getImage();
 		ImageIcon imageIconBtnAddDark = new ImageIcon(imageBtnAddDark.getScaledInstance(150, 106, Image.SCALE_SMOOTH));
 		btnUpdateDark = new JButton();
@@ -129,7 +130,6 @@ public class PanelUpdateNacional extends JPanel {
 		add(labelHoraSalida);
 
 		horaSalida = new JTextArea();
-
 		horaSalida.setBackground(new Color(231, 233, 234));
 		horaSalida.setFont(fonttxt);
 		add(horaSalida);
@@ -183,14 +183,34 @@ public class PanelUpdateNacional extends JPanel {
 		
 		vuelos = new JTextArea();
 		vuelos.setEditable(false);	
-		vuelos.setBounds(30, 260, 530,120 );
+		vuelos.setBounds(30, 260, 250,120 );
 		vuelos.setBackground(new Color(231, 233, 234));
 		add(vuelos);
 		
+
+		labelListaPilotos = new JLabel("Lista de pilotos:");
+		labelListaPilotos.setBounds(300, 240, 250, 20);
+		labelListaPilotos.setFont(fontlbl);
+		add(labelListaPilotos);
+		
+		listaPilotos = new JTextArea();
+		listaPilotos.setBounds(300,260, 250,120);
+		listaPilotos.setBackground(new Color(231, 233, 234));
+		add(listaPilotos);
+		
+		JScrollPane scroll = new JScrollPane(vuelos);
+		scroll.setBounds(30, 260, 250, 120);
+		
+		add(scroll);
+		
+		JScrollPane scroll1 = new JScrollPane(listaPilotos);
+		scroll1.setBounds(300,260, 250,120);
+		
+		add(scroll1);
 		
 		
 		Image imageBtnBack = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/backBright.png").getImage();
+				"assets/backBright.png").getImage();
 		ImageIcon imageIconBtnBack = new ImageIcon(imageBtnBack.getScaledInstance(200, 100, Image.SCALE_SMOOTH));
 		btnBack = new JButton();
 		btnBack.setIcon(imageIconBtnBack);
@@ -203,7 +223,7 @@ public class PanelUpdateNacional extends JPanel {
 		add(btnBack);
 		
 		Image imageBtnBackDark = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/backDark.png").getImage();
+				"assets/backDark.png").getImage();
 		ImageIcon imageIconBtnBackDark = new ImageIcon(imageBtnBackDark.getScaledInstance(200, 100, Image.SCALE_SMOOTH));
 		btnBackDark = new JButton();
 		btnBackDark.setIcon(imageIconBtnBackDark);
@@ -243,7 +263,7 @@ public class PanelUpdateNacional extends JPanel {
 		avianca = new JLabel();
 		avianca.setBounds(500, 5, 300, 59);
 		Image imageAvianca = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/avianca.png").getImage();
+				"assets/avianca.png").getImage();
 		ImageIcon imageIconAvianca = new ImageIcon(imageAvianca.getScaledInstance(250, 59, Image.SCALE_SMOOTH));
 		avianca.setIcon(imageIconAvianca);
 		avianca.setVisible(false);
@@ -251,7 +271,7 @@ public class PanelUpdateNacional extends JPanel {
 		latam = new JLabel();
 		latam.setBounds(500, 5, 250, 59);
 		Image imageLatam = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/latam.png").getImage();
+				"assets/latam.png").getImage();
 		ImageIcon imageIconLatam = new ImageIcon(imageLatam.getScaledInstance(250, 59, Image.SCALE_SMOOTH));
 		latam.setIcon(imageIconLatam);
 		latam.setVisible(false);
@@ -259,7 +279,7 @@ public class PanelUpdateNacional extends JPanel {
 		wingo = new JLabel();
 		wingo.setBounds(500, 5, 250, 70);
 		Image imageWingo = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/wingo.png").getImage();
+				"assets/wingo.png").getImage();
 		ImageIcon imageIconWingo = new ImageIcon(imageWingo.getScaledInstance(250, 70, Image.SCALE_SMOOTH));
 		wingo.setIcon(imageIconWingo);
 		wingo.setVisible(false);
@@ -267,7 +287,7 @@ public class PanelUpdateNacional extends JPanel {
 		emirates = new JLabel();
 		emirates.setBounds(600, 0, 110, 75);
 		Image imageEmirates = new ImageIcon(
-				"/Users/niko/Documents/workspace eclipse/Interfaz_PROYECTOCORTE2/assets/emirates.png").getImage();
+				"assets/emirates.png").getImage();
 		ImageIcon imageIconEmirates = new ImageIcon(imageEmirates.getScaledInstance(110, 75, Image.SCALE_SMOOTH));
 		emirates.setIcon(imageIconEmirates);
 		emirates.setVisible(false);
@@ -520,6 +540,22 @@ public class PanelUpdateNacional extends JPanel {
 
 	public void setLabelNombreCopiloto(JLabel labelNombreCopiloto) {
 		this.labelNombreCopiloto = labelNombreCopiloto;
+	}
+
+	public JTextArea getListaPilotos() {
+		return listaPilotos;
+	}
+
+	public void setListaPilotos(JTextArea listaPilotos) {
+		this.listaPilotos = listaPilotos;
+	}
+
+	public JLabel getLabelListaPilotos() {
+		return labelListaPilotos;
+	}
+
+	public void setLabelListaPilotos(JLabel labelListaPilotos) {
+		this.labelListaPilotos = labelListaPilotos;
 	}
 	
 	
